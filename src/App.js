@@ -1,10 +1,9 @@
+import Users from "./Component/Users/Users";
 
-function App() {
-  return (
-    <div>
-      ello
-    </div>
-  );
+export default function App(){
+    return(
+      <div>
+          <Users/>
+      </div>
+);
 }
-
-export default App;
