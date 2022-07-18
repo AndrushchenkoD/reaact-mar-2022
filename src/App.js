@@ -1,8 +1,9 @@
+import {Missions} from './Component/missions/Missions'
 
 function App() {
   return (
     <div>
-      ello
+      <Missions/>
     </div>
   );
 }
