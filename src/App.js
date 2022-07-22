@@ -1,5 +1,5 @@
 
-function App() {
+export default function App() {
   return (
     <div>
       ello
@@ -7,4 +7,4 @@ function App() {
   );
 }
 
-export default App;
+
