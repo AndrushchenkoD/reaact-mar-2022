@@ -1,10 +1,13 @@
 
-function App() {
+import {Comments} from "./COMPONENT/Comments/Comments"
+import {Users} from "./COMPONENT/Users/Users"
+
+export default function App() {
   return (
     <div>
-      ello
+      <Users/>
+        <Comments/>
     </div>
   );
 }
 
-export default App;
