@@ -1,6 +1,6 @@
 import {useForm} from 'react-hook-form';
 
-import {createUsers} from '../Services/Users.api.service'
+import {createUsers} from '../Services/Users.api.service/User.api.service'
 
 const Users = () => {
 const {register,handleSubmit,formState:{errors}}=useForm(
