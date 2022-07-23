@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import {createComments} from '../Services/index'
 const Comments = () => {
 
-    const {register, handleSubmit, formState: {errors}} = useForm(
+    const {register, handleSubmit} = useForm(
         {
             defaultValues: {
                 name: 'name',
@@ -20,11 +20,9 @@ createComments(obj).then(result=>console.log(result))
         <div>
             <form onSubmit={handleSubmit(submit)}>
                 <input type="text"{...register('name')}/>
-                {
-                    errors.name && <span>Field is required</span>
-                }
                 <input type="text"{...register('email')}/>
                 <input type="text"{...register('body')}/>
+                <input type="submit"/>
             </form>
         </div>
     )
