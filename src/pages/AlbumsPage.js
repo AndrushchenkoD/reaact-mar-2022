@@ -1,9 +1,9 @@
+import AlbumsComponent from "../components/albums/AlbumsComponent"
 
-
-function AlbumsPage(props) {
+function AlbumsPage() {
     return (
         <div>
-
+<AlbumsComponent/>
         </div>
     );
 }

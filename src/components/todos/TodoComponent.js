@@ -1,9 +1,9 @@
 
 
-function TodoComponent(props) {
+function TodoComponent({item}) {
     return (
         <div>
-
+<h3>item.id</h3>
         </div>
     );
 }
