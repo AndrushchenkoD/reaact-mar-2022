@@ -1,10 +1,14 @@
+import React, {Component} from 'react';
 
-export default function App() {
-  return (
-    <div>
-      ello
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
 }
 
+export default App;
 
