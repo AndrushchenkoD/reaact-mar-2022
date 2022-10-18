@@ -1,10 +1,15 @@
+import {Count1Tools, Count2Tools, ShowCounts} from "./components";
 
-export default function App() {
-  return (
-    <div>
-      ello
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+          <ShowCounts/>
+            <hr/>
+            <Count1Tools/>
+            <Count2Tools/>
+        </div>
+    );
+};
 
+export {App};
 
