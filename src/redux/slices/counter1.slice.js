@@ -12,7 +12,7 @@ const getUsers = createAsyncThunk(
     'GetUsers/cunt1Slice',
     async (_,{rejectWithValue})=>{
         try {
-            const users = await fetch('https://jsonplaceholder.typicode.com/user')
+            const users = await fetch('https://jsonplaceholder.typicode.com/users')
                 .then(response => {
                     if (!response.ok){
                         throw Error('Bad request!!!')
@@ -40,20 +40,33 @@ const count1Slice = createSlice({
         reset:(state, action) => {
             state.count1=0
         },
-    },
-    extraReducers:{
-        [getUsers.fulfilled]:(state,action)=>{
-            state.isLoading=false
-         state.users = action.payload
-        },
-        [getUsers.pending]:(state)=>{
-            state.isLoading=true
-        },
-        [getUsers.rejected]:(state, action)=>{
-            state.serverError = action.payload
-        }
 
+    },
+    // extraReducers:{
+    //     [getUsers.fulfilled]:(state,action)=>{
+    //         state.isLoading=false
+    //      state.users = action.payload
+    //     },
+    //     [getUsers.pending]:(state)=>{
+    //         state.isLoading=true
+    //     },
+    //     [getUsers.rejected]:(state, action)=>{
+    //         state.serverError = action.payload
+      //  }
+    extraReducers:(builder)=>{
+        builder
+            .addCase(getUsers.fulfilled, (state, action) => {
+                state.isLoading = false
+                state.users = action.payload
+            })
+            .addCase(getUsers.pending, state => {
+                state.isLoading = true
+            })
+            .addCase(getUsers.rejected, (state, action) => {
+                state.serverError = action.payload
+            })
     }
+
 });
 
 const {reducer:count1Reducer,actions:{inc,dec,reset}}=count1Slice;
