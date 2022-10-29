@@ -2,6 +2,10 @@
   "name": "mar_react_2022",
   "version": "1.0.0",
   "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.8.4",
+    "axios": "^1.1.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
